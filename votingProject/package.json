@@ -1,0 +1,22 @@
+{
+  "name": "votingproject",
+  "version": "1.0.0",
+  "description": "基于区块链的DApp电子投票系统",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx truffle compile",
+    "migrate": "npx truffle migrate --network development",
+    "copy-abi": "copyfiles -f build/contracts/GymToken.json build/contracts/GymManager.json client/src/contracts/",
+    "postmigrate": "npm run copy-abi",
+    "start": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": ["blockchain", "voting", "dapp", "ethereum"],
+  "author": "陈志琛",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.9.6",
+    "truffle": "^5.11.5"
+  }
+}
